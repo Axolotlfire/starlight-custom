@@ -36,7 +36,7 @@ how we do it.
    ====================================================== */
 	.sl-markdown-content .sl-heading-wrapper {
 		/* The size of the SVG icon. */
-		--sl-anchor-icon-size: 0.8275em;
+		--sl-anchor-icon-size: 1.5rem;
 		/* The horizontal space between the SVG icon and the end of the heading text. */
 		--sl-anchor-icon-gap: 0.25em;
 		/* The end of line space required to accommodate the anchor link. */

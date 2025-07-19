@@ -11,6 +11,11 @@
 		--sl-color-gray-6: hsl(224, 14%, 16%);
 		--sl-color-black: hsl(224, 10%, 10%);
 
+		--color-primary: #050506;
+		--color-secondary: #389bd9;
+		--color-tertiary: #d3daec;
+		--color-quaternary: #0b0b0c;
+
 		--sl-hue-orange: 41;
 		--sl-color-orange-low: hsl(var(--sl-hue-orange), 39%, 22%);
 		--sl-color-orange: hsl(var(--sl-hue-orange), 82%, 63%);
