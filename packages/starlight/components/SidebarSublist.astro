@@ -16,7 +16,7 @@ const { sublist, nested } = Astro.props;
 <ul class:list={{ 'top-level': !nested }}>
 	{
 		sublist.map((entry) => (
-			<li>
+			<li class="padding">
 				{entry.type === 'link' ? (
 					<a
 						href={entry.href}
@@ -64,16 +64,22 @@ const { sublist, nested } = Astro.props;
 		ul {
 			--sl-sidebar-item-padding-inline: 0.5rem;
 			list-style: none;
-			padding: 0;
+			padding-bottom: 1rem;
+			padding-left: 0;
+
 		}
 
 		li {
 			overflow-wrap: anywhere;
+			}
+		}
+		.padding {			
+			padding: 1rem var(--sl-sidebar-pad-x) 0;
 		}
 
 		ul ul li {
 			margin-inline-start: var(--sl-sidebar-item-padding-inline);
-			border-inline-start: 1px solid var(--sl-color-hairline-light);
+			border-inline-start: 1px solid rgba(211, 218, 236, 0.3);
 			padding-inline-start: var(--sl-sidebar-item-padding-inline);
 		}
 
@@ -130,8 +136,8 @@ const { sublist, nested } = Astro.props;
 		[aria-current='page']:hover,
 		[aria-current='page']:focus {
 			font-weight: 600;
-			color: var(--sl-color-text-invert);
-			background-color: var(--sl-color-text-accent);
+			color: var(--color-primary);
+			background-color: var(--color-secondary); 
 		}
 
 		a > *:not(:last-child),

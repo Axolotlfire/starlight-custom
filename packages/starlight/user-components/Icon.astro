@@ -26,6 +26,7 @@ const a11yAttrs = label ? ({ 'aria-label': label } as const) : ({ 'aria-hidden':
 		height="16"
 		viewBox="0 0 24 24"
 		fill="currentColor"
+		stroke-width="0.5"
 		set:html={Icons[name]}
 	/>
 </>
@@ -35,8 +36,8 @@ const a11yAttrs = label ? ({ 'aria-label': label } as const) : ({ 'aria-hidden':
 		svg {
 			color: var(--sl-icon-color);
 			font-size: var(--sl-icon-size, 1em);
-			width: 1em;
-			height: 1em;
+			width: 1.5rem;
+			height: 1.5rem;
 		}
 	}
 </style>
