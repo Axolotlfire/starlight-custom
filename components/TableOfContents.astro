@@ -7,12 +7,21 @@ const { toc } = Astro.locals.starlightRoute;
 {
 	toc && (
 		<starlight-toc data-min-h={toc.minHeadingLevel} data-max-h={toc.maxHeadingLevel}>
-			<nav aria-labelledby="starlight__on-this-page">
-				<h2 id="starlight__on-this-page">{Astro.locals.t('tableOfContents.onThisPage')}</h2>
+			<nav class="nav-sidebar" aria-labelledby="starlight__on-this-page">
+				<h2 class="side-border" id="starlight__on-this-page">{Astro.locals.t('tableOfContents.onThisPage')}</h2>
 				<TableOfContentsList toc={toc.items} />
 			</nav>
 		</starlight-toc>
 	)
 }
-
+<style>
+	.side-border{
+		padding: 1rem;
+		border-bottom: 1px solid rgba(211, 218, 236, 0.3);
+		border-right: 1px solid rgba(211, 218, 236, 0.3);
+	}
+	.nav-sidebar {
+		height: 100%;
+	}
+</style>
 <script src="./TableOfContents/starlight-toc"></script>
