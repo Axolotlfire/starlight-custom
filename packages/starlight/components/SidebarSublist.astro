@@ -16,7 +16,7 @@ const { sublist, nested } = Astro.props;
 <ul class:list={{ 'top-level': !nested }}>
 	{
 		sublist.map((entry) => (
-			<li class="padding">
+			<li>
 				{entry.type === 'link' ? (
 					<a
 						href={entry.href}
@@ -36,6 +36,7 @@ const { sublist, nested } = Astro.props;
 				) : (
 					<details
 						open={flattenSidebar(entry.entries).some((i) => i.isCurrent) || !entry.collapsed}
+						class="padding"
 					>
 						<SidebarRestorePoint />
 						<summary>
@@ -53,6 +54,7 @@ const { sublist, nested } = Astro.props;
 						</summary>
 						<Astro.self sublist={entry.entries} nested />
 					</details>
+					<div class="separation"></div>
 				)}
 			</li>
 		))
@@ -68,7 +70,11 @@ const { sublist, nested } = Astro.props;
 			padding-left: 0;
 
 		}
-
+		.separation {
+			border-top: 1px solid rgba(211, 218, 236, 0.3);
+			margin: 0.5rem 0;
+			width: 100%;
+		}
 		li {
 			overflow-wrap: anywhere;
 			}
@@ -94,6 +100,7 @@ const { sublist, nested } = Astro.props;
 		}
 
 		summary {
+			margin-bottom: 1rem;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -123,7 +130,7 @@ const { sublist, nested } = Astro.props;
 			border-radius: 0.25rem;
 			text-decoration: none;
 			color: var(--sl-color-gray-2);
-			padding: 0.3em var(--sl-sidebar-item-padding-inline);
+			padding: 0.8em var(--sl-sidebar-item-padding-inline);
 			line-height: 1.4;
 		}
 

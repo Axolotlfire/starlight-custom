@@ -20,9 +20,6 @@ import TableOfContents from 'virtual:starlight/components/TableOfContents';
 
 <style>
 	@layer starlight.core {
-		.right-sidebar-panel {
-			padding: 1rem var(--sl-sidebar-pad-x);
-		}
 		.sl-container {
 			width: calc(var(--sl-sidebar-width) - 2 * var(--sl-sidebar-pad-x));
 		}
@@ -32,6 +29,7 @@ import TableOfContents from 'virtual:starlight/components/TableOfContents';
 			font-weight: 600;
 			line-height: var(--sl-line-height-headings);
 			margin-bottom: 0.5rem;
+			height: 100%;
 		}
 		.right-sidebar-panel :global(:where(a)) {
 			display: block;
