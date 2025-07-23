@@ -1,6 +1,6 @@
 {
   "name": "@astrojs/starlight",
-  "version": "0.35.1",
+  "version": "0.35.0",
   "description": "Build beautiful, high-performance documentation websites with Astro",
   "scripts": {
     "test": "vitest",
@@ -13,17 +13,18 @@
     "documentation",
     "astro",
     "withastro",
-    "astro-integration"
+    "astro-integration",
+    "planckstar"
   ],
-  "author": "Chris Swithinbank <swithinbank@gmail.com>",
-  "license": "MIT",
+  "author": "Yoxnear <admin@astersts.com>",
+  "license": ".",
   "repository": {
     "type": "git",
-    "url": "https://github.com/withastro/starlight",
+    "url": "https://github.com/Axolotlfire/starlight-custom",
     "directory": "packages/starlight"
   },
-  "bugs": "https://github.com/withastro/starlight/issues",
-  "homepage": "https://starlight.astro.build",
+  "bugs": "https://github.com/Axolotlfire/starlight-custom/issues",
+  "homepage": "https://planckstar.io",
   "type": "module",
   "exports": {
     ".": "./index.ts",
@@ -223,6 +224,12 @@
     "vfile": "^6.0.2"
   },
   "publishConfig": {
-    "provenance": true
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:legacy": "LEGACY_COLLECTIONS=true vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright install --with-deps chromium && playwright test"
   }
 }

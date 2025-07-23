@@ -208,7 +208,7 @@
 	.sl-markdown-content summary:not(:where(.not-content *))::before {
 		--sl-details-marker-size: 1.25rem;
 
-		background-color: white;
+		background-color: currentColor;
 		content: '';
 		display: inline-block;
 		height: var(--sl-details-marker-size);
