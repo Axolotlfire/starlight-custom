@@ -34,7 +34,9 @@ const { toc } = Astro.locals.starlightRoute;
 			top: calc(var(--sl-nav-height) - 1px);
 			inset-inline: 0;
 			border-top: 1px solid var(--sl-color-gray-5);
-			background-color: var(--sl-color-bg-nav);
+			background-color: rgba(0, 0, 0, 0.75); /* Semitransparente */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari */
 		}
 		@media (min-width: 50rem) {
 			nav {
@@ -67,7 +69,7 @@ const { toc } = Astro.locals.starlightRoute;
 			padding-inline-start: 0.75rem;
 			padding-inline-end: 0.5rem;
 			line-height: 1;
-			background-color: var(--sl-color-black);
+			background-color: var(--color-primary);
 			user-select: none;
 			cursor: pointer;
 		}
