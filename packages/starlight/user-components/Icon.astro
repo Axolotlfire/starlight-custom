@@ -23,7 +23,7 @@ const a11yAttrs = label ? ({ 'aria-label': label } as const) : ({ 'aria-hidden':
 		{...a11yAttrs}
 		class={Astro.props.class}
 		width="16"
-		height="16"
+		height="auto"
 		viewBox="0 0 24 24"
 		fill="currentColor"
 		stroke-width="0.5"
@@ -37,7 +37,9 @@ const a11yAttrs = label ? ({ 'aria-label': label } as const) : ({ 'aria-hidden':
 			color: var(--sl-icon-color);
 			font-size: var(--sl-icon-size, 1em);
 			width: 1.5rem;
-			height: 1.5rem;
+			height: auto;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 </style>
