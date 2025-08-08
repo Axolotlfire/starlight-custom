@@ -5,10 +5,6 @@
 		box-sizing: border-box;
 	}
 
-	* {
-		margin: 0;
-	}
-
 	html {
 		color-scheme: dark;
 		accent-color: var(--sl-color-accent);
